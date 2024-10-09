@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[Testing scenario: bothcorrect]]>
+    </line>
+    <line>
+      <![CDATA[Testing scenario: bothwrong]]>
+    </line>
+    <line>
+      <![CDATA[Actual error message: Login was unsuccessful. Please correct the errors and try again.
+The credentials provided are incorrect]]>
+    </line>
+    <line>
+      <![CDATA[Testing scenario: correctusername]]>
+    </line>
+    <line>
+      <![CDATA[Actual error message: Login was unsuccessful. Please correct the errors and try again.
+The credentials provided are incorrect]]>
+    </line>
+    <line>
+      <![CDATA[Testing scenario: correctpassword]]>
+    </line>
+    <line>
+      <![CDATA[Actual error message: Login was unsuccessful. Please correct the errors and try again.
+The credentials provided are incorrect]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2024-10-09T18:17:32 IST" name="Suite" finished-at="2024-10-09T18:17:51 IST" duration-ms="18659">
+    <groups>
+    </groups>
+    <test started-at="2024-10-09T18:17:32 IST" name="Test" finished-at="2024-10-09T18:17:51 IST" duration-ms="18659">
+      <class name="demoweb.DemoLog1">
+        <test-method is-config="true" signature="setup()[pri:0, instance:demoweb.DemoLog1@229f66ed]" started-at="2024-10-09T18:17:32 IST" name="setup" finished-at="2024-10-09T18:17:35 IST" duration-ms="2942" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="login(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:demoweb.DemoLog1@229f66ed]" started-at="2024-10-09T18:17:35 IST" name="login" data-provider="LoginData" finished-at="2024-10-09T18:17:41 IST" duration-ms="6086" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[bothcorrect]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[saranaveen1997@gmail.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Saranya@19]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Testing scenario: bothcorrect]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="login(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:demoweb.DemoLog1@229f66ed]" started-at="2024-10-09T18:17:41 IST" name="login" data-provider="LoginData" finished-at="2024-10-09T18:17:44 IST" duration-ms="3175" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[bothwrong]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[abc@gmail.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[abc@123                ]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Testing scenario: bothwrong]]>
+            </line>
+            <line>
+              <![CDATA[Actual error message: Login was unsuccessful. Please correct the errors and try again.
+The credentials provided are incorrect]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="login(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:demoweb.DemoLog1@229f66ed]" started-at="2024-10-09T18:17:44 IST" name="login" data-provider="LoginData" finished-at="2024-10-09T18:17:47 IST" duration-ms="2521" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[correctusername]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[saranaveen1997@gmail.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[abc@12]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Testing scenario: correctusername]]>
+            </line>
+            <line>
+              <![CDATA[Actual error message: Login was unsuccessful. Please correct the errors and try again.
+The credentials provided are incorrect]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="login(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:demoweb.DemoLog1@229f66ed]" started-at="2024-10-09T18:17:47 IST" name="login" data-provider="LoginData" finished-at="2024-10-09T18:17:50 IST" duration-ms="2547" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[correctpassword]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[abc@gmail.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Saranya@1997     ]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Testing scenario: correctpassword]]>
+            </line>
+            <line>
+              <![CDATA[Actual error message: Login was unsuccessful. Please correct the errors and try again.
+The credentials provided are incorrect]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:demoweb.DemoLog1@229f66ed]" started-at="2024-10-09T18:17:50 IST" name="tearDown" finished-at="2024-10-09T18:17:51 IST" duration-ms="1301" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- demoweb.DemoLog1 -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
