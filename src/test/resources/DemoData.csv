@@ -1,0 +1,5 @@
+scenario,usename,password                           
+bothcorrect,saranaveen1997@gmail.com,Saranya@1997   
+bothwrong,abc@gmail.com,abc@123                     
+correctusername,saranaveen1997@gmail.com,abc@123    
+correctpassword,abc@gmail.com,Saranya@1997          

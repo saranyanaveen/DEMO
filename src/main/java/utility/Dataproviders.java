@@ -12,12 +12,12 @@ public class Dataproviders {
     @DataProvider(name = "LoginData")
     public Object[][] loginDataprovider() throws IOException, CsvException {
        
-        List<String[]> Data = CSVUtils.readCSV("./src/test/resources/credential.csv");
+        List<String[]> csvData = CSVUtils.readCSV("./src/test/resources/DemoData.csv");
         
         // Convert List<String[]> to Object[][]
-        Object[][] result = new Object[Data.size()][3];
-        for (int i = 0; i < Data.size(); i++) {
-            result[i] = Data.get(i);
+        Object[][] result = new Object[csvData.size()][3];
+        for (int i = 0; i < csvData.size(); i++) {
+            result[i] = csvData.get(i);
         }
         
         return result;

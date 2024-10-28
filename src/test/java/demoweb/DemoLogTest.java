@@ -1,6 +1,7 @@
 package demoweb;
 
 import java.io.File;
+import java.net.URL;
 import java.time.Duration;
 
 import org.apache.commons.io.FileUtils;
@@ -10,6 +11,9 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -18,20 +22,39 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import utility.Dataproviders;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
-public class DemoLog1 {
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class DemoLogTest {
 	private ExtentReports extent;
 	private ExtentTest test;
-	private WebDriver driver;
+	
+	public WebDriver driver;
 
+	
+	
 	@BeforeClass
-	public void setup() {
-		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver();
+	public void setup() throws Throwable {
+
+		//WebDriverManager.chromedriver().setup();
+		//driver = new ChromeDriver();
+
+		
+		  
+		  
+		  // Optionally, you can add Chrome options if needed 
+		  ChromeOptions options =new ChromeOptions(); // Add any specific options if required //
+		  options.addArguments("--headless"); // Uncomment for headless mode
+		  DesiredCapabilities capabilities = new DesiredCapabilities(); 
+		  capabilities.setBrowserName("chrome");
+		  capabilities.setCapability(ChromeOptions.CAPABILITY, options);
+		  
+		  // Initialize the remote WebDriver pointing to the Selenium Grid hub //
+		  driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),capabilities);
+		  
 		extent = new ExtentReports();
 		ExtentSparkReporter sparkReporter = new ExtentSparkReporter("extent-report.html");
 		extent.attachReporter(sparkReporter);
@@ -65,12 +88,10 @@ public class DemoLog1 {
 				// Take a screenshot for failure
 				TakesScreenshot ts = (TakesScreenshot) driver;
 				File file = ts.getScreenshotAs(OutputType.FILE);
-				String screenshotPath = "./Screenshots/" + scenario + "image1.png"; 
-
+				String screenshotPath = "./Screenshots/" + scenario + "image1.png";
 
 				FileUtils.copyFile(file, new File(screenshotPath));
-				 test.fail("Login failed: " + errorMessage)
-                 .addScreenCaptureFromPath(screenshotPath);
+				test.fail("Login failed: " + errorMessage).addScreenCaptureFromPath(screenshotPath);
 
 				Assert.assertTrue(errorMessage.contains("The credentials provided are incorrect"),
 						"Error message does not match expected text.");

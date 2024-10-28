@@ -9,6 +9,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CSVUtils {
+	
+	 // Private constructor to prevent instantiation
+    private CSVUtils() {
+        // This constructor is intentionally left blank
+    }
     public static List<String[]> readCSV(String filePath) throws IOException, CsvException {
         List<String[]> data = new ArrayList<>();
         try (CSVReader reader = new CSVReader(new FileReader(filePath))) {

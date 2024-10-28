@@ -26,16 +26,16 @@ The credentials provided are incorrect]]>
 The credentials provided are incorrect]]>
     </line>
   </reporter-output>
-  <suite started-at="2024-10-09T18:17:32 IST" name="Suite" finished-at="2024-10-09T18:17:51 IST" duration-ms="18659">
+  <suite started-at="2024-10-26T16:09:36 IST" name="Suite" finished-at="2024-10-26T16:10:03 IST" duration-ms="27168">
     <groups>
     </groups>
-    <test started-at="2024-10-09T18:17:32 IST" name="Test" finished-at="2024-10-09T18:17:51 IST" duration-ms="18659">
-      <class name="demoweb.DemoLog1">
-        <test-method is-config="true" signature="setup()[pri:0, instance:demoweb.DemoLog1@229f66ed]" started-at="2024-10-09T18:17:32 IST" name="setup" finished-at="2024-10-09T18:17:35 IST" duration-ms="2942" status="PASS">
+    <test started-at="2024-10-26T16:09:36 IST" name="Test" finished-at="2024-10-26T16:10:03 IST" duration-ms="27168">
+      <class name="demoweb.DemoLogTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:demoweb.DemoLogTest@185a6e9]" started-at="2024-10-26T16:09:36 IST" name="setup" finished-at="2024-10-26T16:09:40 IST" duration-ms="3693" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="login(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:demoweb.DemoLog1@229f66ed]" started-at="2024-10-09T18:17:35 IST" name="login" data-provider="LoginData" finished-at="2024-10-09T18:17:41 IST" duration-ms="6086" status="PASS">
+        <test-method signature="login(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:demoweb.DemoLogTest@185a6e9]" started-at="2024-10-26T16:09:40 IST" name="login" data-provider="LoginData" finished-at="2024-10-26T16:09:52 IST" duration-ms="11904" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -49,7 +49,7 @@ The credentials provided are incorrect]]>
             </param>
             <param index="2">
               <value>
-                <![CDATA[Saranya@19]]>
+                <![CDATA[Saranya@1997   ]]>
               </value>
             </param>
           </params>
@@ -59,7 +59,7 @@ The credentials provided are incorrect]]>
             </line>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method signature="login(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:demoweb.DemoLog1@229f66ed]" started-at="2024-10-09T18:17:41 IST" name="login" data-provider="LoginData" finished-at="2024-10-09T18:17:44 IST" duration-ms="3175" status="PASS">
+        <test-method signature="login(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:demoweb.DemoLogTest@185a6e9]" started-at="2024-10-26T16:09:52 IST" name="login" data-provider="LoginData" finished-at="2024-10-26T16:09:55 IST" duration-ms="3537" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -73,7 +73,7 @@ The credentials provided are incorrect]]>
             </param>
             <param index="2">
               <value>
-                <![CDATA[abc@123                ]]>
+                <![CDATA[abc@123                     ]]>
               </value>
             </param>
           </params>
@@ -87,7 +87,7 @@ The credentials provided are incorrect]]>
             </line>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method signature="login(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:demoweb.DemoLog1@229f66ed]" started-at="2024-10-09T18:17:44 IST" name="login" data-provider="LoginData" finished-at="2024-10-09T18:17:47 IST" duration-ms="2521" status="PASS">
+        <test-method signature="login(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:demoweb.DemoLogTest@185a6e9]" started-at="2024-10-26T16:09:55 IST" name="login" data-provider="LoginData" finished-at="2024-10-26T16:09:59 IST" duration-ms="3447" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -101,7 +101,7 @@ The credentials provided are incorrect]]>
             </param>
             <param index="2">
               <value>
-                <![CDATA[abc@12]]>
+                <![CDATA[abc@123    ]]>
               </value>
             </param>
           </params>
@@ -115,7 +115,7 @@ The credentials provided are incorrect]]>
             </line>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method signature="login(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:demoweb.DemoLog1@229f66ed]" started-at="2024-10-09T18:17:47 IST" name="login" data-provider="LoginData" finished-at="2024-10-09T18:17:50 IST" duration-ms="2547" status="PASS">
+        <test-method signature="login(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:demoweb.DemoLogTest@185a6e9]" started-at="2024-10-26T16:09:59 IST" name="login" data-provider="LoginData" finished-at="2024-10-26T16:10:02 IST" duration-ms="3227" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -129,7 +129,7 @@ The credentials provided are incorrect]]>
             </param>
             <param index="2">
               <value>
-                <![CDATA[Saranya@1997     ]]>
+                <![CDATA[Saranya@1997          ]]>
               </value>
             </param>
           </params>
@@ -143,11 +143,11 @@ The credentials provided are incorrect]]>
             </line>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:demoweb.DemoLog1@229f66ed]" started-at="2024-10-09T18:17:50 IST" name="tearDown" finished-at="2024-10-09T18:17:51 IST" duration-ms="1301" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:demoweb.DemoLogTest@185a6e9]" started-at="2024-10-26T16:10:02 IST" name="tearDown" finished-at="2024-10-26T16:10:03 IST" duration-ms="1262" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- demoweb.DemoLog1 -->
+      </class> <!-- demoweb.DemoLogTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>
