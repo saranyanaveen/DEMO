@@ -1,0 +1,40 @@
+name: Generate Release Notes
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  generate-release-notes:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+      - name: Install Release Drafter (for Release Notes)
+        uses: release-drafter/release-drafter@v5
+      - name: Generate Release Notes
+        run: >
+          release-notes-generator --token ${{ secrets.GITHUB_TOKEN }} --repo
+          ${GITHUB_REPOSITORY} --tag ${GITHUB_REF} > release-notes.md
+      - name: Commit and push the release notes
+        run: >
+          git config --global user.email "saranaveen1997@gmail.com"  # Change to
+          your email
+
+          git config --global user.name "saranya"  # Change to your name
+
+          git add release-notes.md
+
+          git commit -m "Add release notes for ${{ github.ref_name }}"
+
+          git push origin master  # Change this to your branch name
+      - name: Upload Release Notes as Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: release-notes
+          path: release-notes.md
