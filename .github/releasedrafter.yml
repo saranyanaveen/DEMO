@@ -1,0 +1,50 @@
+# .github/release-drafter.yml
+
+# Configure the Release Drafter to generate release notes based on your custom template
+template: |
+  ## Release Title:
+  **[${version}]** Major Release
+
+  ## Release Date:
+  ${date}
+
+  ## Overview:
+  Describe the main focus of this release, such as major updates, new integrations, or platform improvements.
+
+  ## Highlights:
+  - Bullet-point list of major highlights and why they’re important.
+
+  ## New Features:
+  ${features}
+
+  ## Improvements/Enhancements:
+  ${improvements}
+
+  ## Bug Fixes:
+  ${bugs}
+
+  ## Known Issues:
+  ${issues}
+  Workaround: Suggested workaround if applicable.
+
+# Customize how to categorize commits into "Features," "Improvements," and "Bugs"
+changes:
+  features: ['feature']
+  improvements: ['enhancement', 'perf']
+  bugs: ['bug', 'fix']
+
+# Customize the version format, e.g., `v1.0.0`
+version: 'v${version}'
+
+# Customize the label for issues that are marked as bugs
+labels:
+  - bug
+  - enhancement
+  - feature
+  - fix
+
+# Automatically draft the release on new commits to the `master` branch
+draft: true
+
+# Setup configuration for releasing from GitHub Actions
+target: master
